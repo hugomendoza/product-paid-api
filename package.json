@@ -24,6 +24,7 @@
   "homepage": "https://github.com/hugomendoza/product-paid-api#readme",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.11.1",
     "dotenv": "^17.2.0",
     "env-var": "^7.5.0",
     "express": "^5.1.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "prisma": "^6.11.1",
     "typescript": "^5.8.3"
   }
 }

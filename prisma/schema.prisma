@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  price       Float
+  stock       Int
+  image_url   String
+  createdAt DateTime @default(now())
+  transactions Transaction[]
+
+  @@map("products")
+}
+
+model Customer {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  phone     String
+  adress    String
+  city      String
+  createdAt DateTime @default(now())
+  transactions Transaction[]
+
+  @@map("customers")
+}
+
+model Transaction {
+  id                   String            @id @default(cuid())
+  wompi_transaction_id String?           @unique
+  status               TransactionStatus @default(PENDING)
+  product_amount       Decimal           @db.Decimal(10, 2)
+  base_fee             Decimal           @db.Decimal(10, 2)
+  delivery_fee         Decimal           @db.Decimal(10, 2)
+  total_amount         Decimal           @db.Decimal(10, 2)
+  payment_method       String
+
+  customer             Customer          @relation(fields: [customerId], references: [id])
+  customerId           String
+
+  delivery             Delivery?
+
+  product              Product           @relation(fields: [productId], references: [id])
+  productId            String
+
+  createdAt DateTime @default(now())
+
+  @@map("transactions")
+}
+
+model Delivery {
+  id               String         @id @default(cuid())
+  customer_address String
+  city             String
+  country          String
+
+  transaction      Transaction    @relation(fields: [transactionId], references: [id])
+  transactionId    String         @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("deliveries")
+}
+
+enum TransactionStatus {
+  PENDING
+  APPROVED
+  DECLINED
+  FAILED
+}
