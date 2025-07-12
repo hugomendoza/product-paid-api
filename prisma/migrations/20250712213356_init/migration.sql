@@ -17,7 +17,6 @@ CREATE TABLE "products" (
 -- CreateTable
 CREATE TABLE "customers" (
     "id" TEXT NOT NULL,
-    "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
     "adress" TEXT NOT NULL,
@@ -56,9 +55,6 @@ CREATE TABLE "deliveries" (
 
     CONSTRAINT "deliveries_pkey" PRIMARY KEY ("id")
 );
-
--- CreateIndex
-CREATE UNIQUE INDEX "customers_email_key" ON "customers"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "transactions_wompi_transaction_id_key" ON "transactions"("wompi_transaction_id");
