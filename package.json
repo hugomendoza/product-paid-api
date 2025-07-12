@@ -24,6 +24,8 @@
   "homepage": "https://github.com/hugomendoza/product-paid-api#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^17.2.0",
+    "env-var": "^7.5.0",
     "express": "^5.1.0",
     "rimraf": "^6.0.1",
     "ts-node-dev": "^2.0.0"
