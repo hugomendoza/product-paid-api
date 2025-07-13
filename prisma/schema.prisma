@@ -65,13 +65,11 @@ model Delivery {
   id               String         @id @default(uuid())
   customer_address String
   city             String
-  country          String
 
   transaction      Transaction    @relation(fields: [transactionId], references: [id])
   transactionId    String         @unique
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
   @@map("deliveries")
 }
