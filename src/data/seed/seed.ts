@@ -1,4 +1,4 @@
-import { prisma } from '../postgres';
+import { prisma } from '../postgres-db';
 import { products as seedProducts } from './data';
 
 async function main() {

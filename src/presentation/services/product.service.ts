@@ -1,4 +1,4 @@
-import { prisma } from '../../data/postgres';
+import { prisma } from '../../data/postgres-db';
 import { CustomError } from '../../domain/errors/custom.error';
 
 export class ProductService {
