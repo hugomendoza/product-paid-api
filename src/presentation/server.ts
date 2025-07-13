@@ -1,4 +1,6 @@
 import express, { Router } from 'express';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from '../config/swagger';
 
 interface Props {
   port: number;
@@ -18,6 +20,8 @@ export class Server {
 
   async start() {
     this.app.use(express.json());
+
+    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
     this.app.use(this.routes);
 
     this.serverListener = this.app.listen(this.port, () => {
