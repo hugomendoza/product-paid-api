@@ -2,17 +2,19 @@ import { prisma } from '../postgres-db';
 import { products as seedProducts } from './data';
 
 async function main() {
-  const deleteCustomers = prisma.customer.deleteMany();
-  const deleteDeliveries = prisma.delivery.deleteMany();
-  const deleteProducts = prisma.product.deleteMany();
-  const deleteTransactions = prisma.transaction.deleteMany();
+  const deleteDeliveries = await prisma.delivery.deleteMany();
+  const deleteTransactions = await prisma.transaction.deleteMany();
+  const deleteCustomers = await prisma.customer.deleteMany();
+  const deleteProducts = await prisma.product.deleteMany();
 
-  await prisma.$transaction([
-    deleteCustomers,
-    deleteDeliveries,
-    deleteProducts,
-    deleteTransactions,
-  ]);
+  // await prisma.$transaction([
+  //   deleteCustomers,
+  //   deleteDeliveries,
+  //   deleteProducts,
+  //   deleteTransactions,
+  // ]);
+
+  Promise.all([deleteCustomers, deleteDeliveries, deleteProducts, deleteTransactions]);
 
   await prisma.product.createMany({
     data: seedProducts,

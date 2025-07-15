@@ -2,7 +2,7 @@ export const products = [
   {
     id: 'c1f72a7c-6c1c-4bcb-85f1-7a1c4f2c8f34',
     name: 'El Señor de los Anillos',
-    price: 19.99,
+    price: 39900,
     stock: 10,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716234904/cover-books/o5jxnnjnufzxoakglo0l.jpg',
@@ -12,7 +12,7 @@ export const products = [
   {
     id: '3a1a15e6-7a8c-47e3-9a6b-0c4b9d1c76f8',
     name: 'El Hobbit',
-    price: 29.99,
+    price: 29900,
     stock: 5,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223622/cover-books/h2zowz5v9j1jkowzyxlu.jpg',
@@ -22,7 +22,7 @@ export const products = [
   {
     id: 'a5a7f6a6-7f1c-4b4b-8f1e-4c1c4f2c8f34',
     name: 'El Silmarillion',
-    price: 9.99,
+    price: 65500,
     stock: 20,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223622/cover-books/h2zowz5v9j1jkowzyxlu.jpg',
@@ -32,7 +32,7 @@ export const products = [
   {
     id: 'd1c72a7c-6c1c-4bcb-85f1-7a1c4f2c8f34',
     name: 'El Retorno del Rey',
-    price: 39.99,
+    price: 99900,
     stock: 3,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223232/cover-books/zw7muks3ozluetnvjxsq.jpg',
@@ -42,7 +42,7 @@ export const products = [
   {
     id: 'e5e7f6a6-7f1c-4b4b-8f1e-4c1c4f2c8f34',
     name: 'Las Dos Torres',
-    price: 14.99,
+    price: 120900,
     stock: 15,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223235/cover-books/hbajsstjz5jnoanyluv1.jpg',
@@ -52,7 +52,7 @@ export const products = [
   {
     id: 'f1f72a7c-6c1c-4bcb-85f1-7a1c4f2c8f34',
     name: 'La Comunidad del Anillo',
-    price: 24.99,
+    price: 79900,
     stock: 8,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223233/cover-books/bssgxxq19tvi8kve6zmb.jpg',
@@ -62,7 +62,7 @@ export const products = [
   {
     id: 'g5a7f6a6-7f1c-4b4b-8f1e-4c1c4f2c8f34',
     name: 'La Sombra del Pasado',
-    price: 7.99,
+    price: 15900,
     stock: 25,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223233/cover-books/oyaoqbqmac7b4qehdlpg.jpg',
@@ -72,7 +72,7 @@ export const products = [
   {
     id: 'h1c72a7c-6c1c-4bcb-85f1-7a1c4f2c8f34',
     name: 'El Amor y el Destino',
-    price: 49.99,
+    price: 9900,
     stock: 2,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223231/cover-books/snlu2lpub6d1m0u5gtdf.jpg',
@@ -82,7 +82,7 @@ export const products = [
   {
     id: 'i5e7f6a6-7f1c-4b4b-8f1e-4c1c4f2c8f34',
     name: 'El Fin de la Tercera Edad',
-    price: 17.99,
+    price: 20900,
     stock: 12,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223229/cover-books/bpko5tutfkvddfjsq1gf.jpg',
@@ -92,7 +92,7 @@ export const products = [
   {
     id: 'j1f72a7c-6c1c-4bcb-85f1-7a1c4f2c8f34',
     name: 'La Guerra de las Joyas',
-    price: 34.99,
+    price: 35900,
     stock: 6,
     image_url:
       'https://res.cloudinary.com/djfxyhasn/image/upload/v1716223229/cover-books/jc2krzbad6gyftug4qnx.jpg',
