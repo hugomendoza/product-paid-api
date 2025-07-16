@@ -21,7 +21,7 @@ export class TokenCardController {
 
     this.tokenCardService
       .createTokenCard(createDto!)
-      .then((token) => res.json(token))
+      .then((token) => res.status(201).json(token))
       .catch((error) => this.handleError(error, res));
   };
 }

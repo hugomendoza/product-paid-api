@@ -18,6 +18,7 @@ CREATE TABLE "products" (
 CREATE TABLE "customers" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
     "adress" TEXT NOT NULL,
     "city" TEXT NOT NULL,

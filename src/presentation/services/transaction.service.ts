@@ -24,7 +24,7 @@ export class TransactionService {
         where: { id },
       });
 
-      if (!transaction) throw CustomError.notFound('Producto no encontrado');
+      if (!transaction) throw CustomError.notFound('Transacción no encontrada');
       return {
         transaction,
       };

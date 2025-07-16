@@ -7,13 +7,6 @@ async function main() {
   const deleteCustomers = await prisma.customer.deleteMany();
   const deleteProducts = await prisma.product.deleteMany();
 
-  // await prisma.$transaction([
-  //   deleteCustomers,
-  //   deleteDeliveries,
-  //   deleteProducts,
-  //   deleteTransactions,
-  // ]);
-
   Promise.all([deleteCustomers, deleteDeliveries, deleteProducts, deleteTransactions]);
 
   await prisma.product.createMany({
