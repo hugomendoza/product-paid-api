@@ -4,6 +4,7 @@ import { TransactionRoutes } from './transactions/routes';
 import { CustomerRoutes } from './customers/routes';
 import { DeliveryRoutes } from './deliveries/routes';
 import { TokenCardRoutes } from './token/routes';
+import { ProviderTransactionRoutes } from './provider/routes';
 
 export class AppRoutes {
   static get routes(): Router {
@@ -13,6 +14,7 @@ export class AppRoutes {
     router.use('/api/customers', CustomerRoutes.routes);
     router.use('/api/deliveries', DeliveryRoutes.routes);
     router.use('/api/card', TokenCardRoutes.routes);
+    router.use('/api/provider', ProviderTransactionRoutes.routes);
     return router;
   }
 }

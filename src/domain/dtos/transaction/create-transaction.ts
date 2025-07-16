@@ -1,6 +1,5 @@
 export class CreateTransactionDto {
   private constructor(
-    public wompi_transaction_id: string,
     public status: 'PENDING' | 'APPROVED' | 'DECLINED' | 'FAILED',
     public product_amount: number,
     public base_fee: number,
@@ -13,7 +12,6 @@ export class CreateTransactionDto {
 
   static create(object: { [key: string]: any }): [string?, CreateTransactionDto?] {
     const {
-      wompi_transaction_id,
       status,
       product_amount,
       base_fee,
@@ -24,7 +22,6 @@ export class CreateTransactionDto {
       productId,
     } = object;
 
-    if (!wompi_transaction_id) return ['Missing wompi_transaction_id'];
     if (!status) return ['Missing status'];
     if (!product_amount) return ['Missing product_amount'];
     if (!base_fee) return ['Missing base_fee'];
@@ -37,7 +34,6 @@ export class CreateTransactionDto {
     return [
       undefined,
       new CreateTransactionDto(
-        wompi_transaction_id,
         status,
         product_amount,
         base_fee,
