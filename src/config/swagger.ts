@@ -6,30 +6,38 @@ const swaggerDefinition = {
   info: {
     title: 'Product Paid API',
     version: '1.0.0',
-    description: 'API documentation for the Product Paid service.',
+    description: 'Documentación de la API del servicio Product Paid.',
   },
   servers: [
     {
       url: `http://localhost:${envs.PORT}`,
-      description: 'Development server',
+      description: 'Servidor de desarrollo',
     },
   ],
   tags: [
     {
       name: 'Products',
-      description: 'Endpoints for managing products',
+      description: 'Endpoints para administrar productos',
     },
     {
       name: 'Transactions',
-      description: 'Endpoints for managing transactions',
+      description: 'Endpoints para administrar transacciones',
     },
     {
       name: 'Customers',
-      description: 'Endpoints for managing customers',
+      description: 'Endpoints para administrar clientes',
     },
     {
       name: 'Deliveries',
-      description: 'Endpoints for managing deliveries',
+      description: 'Endpoints para administrar entregas',
+    },
+    {
+      name: 'Provider',
+      description: 'Endpoints para administrar transacciones del proveedor',
+    },
+    {
+      name: 'Token',
+      description: 'Endpoints para administrar tokens de tarjeta',
     },
   ],
 };
